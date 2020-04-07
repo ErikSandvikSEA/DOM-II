@@ -54,6 +54,12 @@ pTags.forEach(pTag => {
      e.target.style.fontStyle = 'italic'
 })
      })
+
+     pTags.forEach(pTag => {
+          pTag.addEventListener('mouseout', function (e) {
+           // console.log('working')
+           e.target.style.fontWeight = 'bold'      })
+           })
 function flipBoat (e){
     if(e.key === 'ArrowRight') {
      boatPic.classList.add('flip-box')
