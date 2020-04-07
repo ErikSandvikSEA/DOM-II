@@ -1,36 +1,56 @@
 body {
-  display: flex;
-  /*justify-content: center;*/
+	display: flex;
+	/*justify-content: center;*/
 }
 
 .blocks {
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;
+	margin-top: 5%;
+	display: flex;
+	flex-direction: column;
 }
 
 .block {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
 }
 
 .block--red {
-  background-color: red;
+	background-color: red;
+	position: relative;
+	--x: 10px;
+	--y: 10px;
+	transform: translateX(var(--x)) translateY(var(--y));
 }
 
 .block--blue {
-  background-color: blue;
+	background-color: blue;
+	position: relative;
+	--x: 10px;
+	--y: 10px;
+	transform: translateX(var(--x)) translateY(var(--y));
 }
 
 .block--green {
-  background-color: green;
+	background-color: green;
+	position: relative;
+	--x: 10px;
+	--y: 10px;
+	transform: translateX(var(--x)) translateY(var(--y));
 }
 
 .block--pink {
-  background-color: pink;
+	background-color: pink;
+	position: relative;
+	--x: 10px;
+	--y: 10px;
+	transform: translateX(var(--x)) translateY(var(--y));
 }
 
 .block--gray {
-  background-color: gray;
+	background-color: gray;
+	position: relative;
+	--x: 10px;
+	--y: 10px;
+	transform: translateX(var(--x)) translateY(var(--y));
 }
