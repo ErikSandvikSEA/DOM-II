@@ -69,6 +69,10 @@ function youTouched () {
      alert('I CANNOT BELIEVE YOU TOUCHED')
 }
 
+function changeText (e) {
+     e.target.textContent = "YOU HAVE SELECTED ME"
+}
+
 //event listeners
 navContainer.addEventListener('dblclick', addYellow)
 
@@ -85,3 +89,7 @@ document.addEventListener('keydown', flipBoat)
 footer.addEventListener('dblclick', viewHeight)
 
 newA.addEventListener('mouseenter', youTouched)
+
+newP.addEventListener('mouseout', function() {
+     alert( "YOU HAVE ABANDONED ME")
+})
