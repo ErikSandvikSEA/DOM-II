@@ -1,114 +1,185 @@
 .home {
+	.intro {
+		padding: 90px 0 10px;
+		border-bottom: 2px dashed @navigation-border;
 
-  .intro {
-    padding: 90px 0 10px;
-    border-bottom: 2px dashed @navigation-border;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
 
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+		h2 {
+			margin-top: 20px;
+		}
+	}
 
-    h2 {
-      margin-top: 20px;
-    }
-  }
+	.content-section {
+		margin: 30px 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 
-  .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+		.text-content {
+			width: 48%;
+			padding-right: 1%;
 
-   
-    
-    .text-content {
-      width: 48%;
-      padding-right: 1%;
+			@media @mobile {
+				width: 100%;
+				padding: 0;
+			}
+		}
 
-      @media @mobile {
-        width: 100%;
-        padding: 0;
-      }
-    }
+		.img-content {
+			width: 48%;
+			padding-left: 1%;
 
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
+			@media @mobile {
+				width: 100%;
+				padding: 0;
+			}
 
-      @media @mobile {
-        width: 100%;
-        padding: 0;
-      }
+			img {
+				border-radius: 10px;
 
-      img {
-        border-radius: 10px;
+				@media @mobile {
+					width: 100%;
+				}
+			}
+		}
+	}
 
-        @media @mobile {
-          width: 100%;
-        }
-      }
-    }
-  }
+	.inverse-content {
+		padding-bottom: 30px;
+		border-bottom: 2px dashed @navigation-border;
 
-  .inverse-content {
-    padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+		.text-content {
+			padding-left: 1%;
+			padding-right: 0;
 
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
+			@media @mobile {
+				order: 1;
+			}
+		}
 
-      @media @mobile {
-        order: 1;
-      }
-    }
+		.img-content {
+			padding-right: 1%;
+			padding-left: 0;
 
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
+			@media @mobile {
+				order: 2;
+			}
+		}
+	}
 
-      @media @mobile {
-        order: 2;
-      }
-    }
-  }
+	.content-destination {
+		width: 75%;
+		margin: 0 auto 30px;
 
-  .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
+		@media @mobile {
+			width: 100%;
+		}
 
-    @media @mobile {
-      width: 100%;
-    }
+		img {
+			border-radius: 10px;
+		}
+	}
 
-    img {
-      border-radius: 10px;
-    }
-  }
+	.content-pick {
+		padding-top: 30px;
+		border-top: 2px dashed @navigation-border;
+		display: flex;
+		justify-content: space-between;
 
-  .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+		@media @mobile {
+			flex-wrap: wrap;
+		}
 
-    @media @mobile {
-      flex-wrap: wrap;
-    }
+		.destination {
+			width: 30%;
+			margin-bottom: 30px;
 
-    .destination {
-      width: 30%;
-      margin-bottom: 30px;
+			@media @mobile {
+				width: 80%;
+				margin: 0 auto 30px;
+			}
 
-      @media @mobile {
-        width: 80%;
-        margin: 0 auto 30px;
-      }
-      
-      .btn {
-        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);     
-      }
-    }
-  }
-}// home
+			.btn {
+				.button-creator(200px, 45px, @button-bg, @white, 1.8rem);
+			}
+		}
+	}
+} // home
+.bold-font {
+	font-weight: bold;
+	text-decoration: underline;
+	color: red;
+}
+.shrinkClass {
+	width: 60%;
+}
+
+.shakeClass {
+	/* Start the shake animation and make the animation last for 0.5 seconds */
+	animation: shake 0.5s;
+
+	/* When the animation is finished, start again */
+	animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+	0% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	10% {
+		transform: translate(-1px, -2px) rotate(-1deg);
+	}
+	20% {
+		transform: translate(-3px, 0px) rotate(1deg);
+	}
+	30% {
+		transform: translate(3px, 2px) rotate(0deg);
+	}
+	40% {
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+	50% {
+		transform: translate(-1px, 2px) rotate(-1deg);
+	}
+	60% {
+		transform: translate(-3px, 1px) rotate(0deg);
+	}
+	70% {
+		transform: translate(3px, 1px) rotate(-1deg);
+	}
+	80% {
+		transform: translate(-1px, -1px) rotate(1deg);
+	}
+	90% {
+		transform: translate(1px, 2px) rotate(0deg);
+	}
+	100% {
+		transform: translate(1px, -2px) rotate(-1deg);
+	}
+}
+.disappear {
+	color: @white;
+}
+
+.flip-box {
+	background-color: transparent;
+	width: 300px;
+	height: 200px;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+	transform: rotateY(180deg);
+}
