@@ -17,40 +17,26 @@ body {
 
 .block--red {
 	background-color: red;
-	position: relative;
-	--x: 10px;
-	--y: 10px;
-	transform: translateX(var(--x)) translateY(var(--y));
 }
 
 .block--blue {
 	background-color: blue;
-	position: relative;
-	--x: 10px;
-	--y: 10px;
-	transform: translateX(var(--x)) translateY(var(--y));
 }
 
 .block--green {
 	background-color: green;
-	position: relative;
-	--x: 10px;
-	--y: 10px;
-	transform: translateX(var(--x)) translateY(var(--y));
 }
 
 .block--pink {
 	background-color: pink;
-	position: relative;
-	--x: 10px;
-	--y: 10px;
-	transform: translateX(var(--x)) translateY(var(--y));
 }
 
 .block--gray {
 	background-color: gray;
+}
+
+.positioning {
 	position: relative;
-	--x: 10px;
-	--y: 10px;
-	transform: translateX(var(--x)) translateY(var(--y));
+	--x: 0px;
+	transform: translateX(var(--x));
 }
